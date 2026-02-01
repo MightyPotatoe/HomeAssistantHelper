@@ -1,0 +1,30 @@
+<div class="card">
+    <h2 class="card-title">Step 2: Creating boolean inputs for basic plant attribute</h2>
+
+    <p class="card-description">
+        In this step, the wizard generates the necessary boolean inputs for your plant.
+        This will create sensors like <strong>plant info</strong>, <strong>watering status</strong>,
+        and <strong>home storage status</strong> for your selected plant.
+    </p>
+
+    <p class="card-description">
+        You need to add the generated code into the file:
+        <br>
+        <code style="background-color:#e0e0e0; padding:2px 4px; border-radius:4px;">
+            /homeassistant/custom_sensors/input/plants_boolean_inputs.yaml
+        </code>.
+    </p>
+
+    <div class="code-container">
+        <pre class="code-block" id="generatedCode"></pre>
+        <button class="copy-button" onclick="copyCode('generatedCode')">Copy</button>
+    </div>
+
+    <div>
+        <button class="card-button" onclick="loadStep('/html/plant_wizard_step_3.html')">
+            Next
+        </button>
+    </div>
+
+</div>
+

@@ -1,0 +1,17 @@
+[versions]
+lombokVersion = "1.18.40"
+pmdVersion = "7.20.0"
+jUnitVeriosn = "6.0.2"
+
+[libraries]
+#----------------------------SOURCE DEPENDENCIES-----------------------------
+lombok = {group = "org.projectlombok", name="lombok", version.ref = "lombokVersion"}
+springBootStarterWeb = {group = "org.springframework.boot", name="spring-boot-starter-web"}
+pmd = {group = "net.sourceforge.pmd", name="pmd-java", version.ref = "pmdVersion"}
+hibernate = {group = "org.hibernate.orm", name = "hibernate-community-dialects"}
+
+#-----------------------------TEST DEPENDENCIES-----------------------------
+springBootStartetTest = {group = "org.springframework.boot", name="spring-boot-starter-test"}
+jUnitBom = {group = "org.junit", name="junit-bom", version.ref = "jUnitVeriosn"}
+jUnitPlatformLauncher = {group = "org.junit.platform", name="junit-platform-launcher"}
+jUnitJupiter = {group = "org.junit.jupiter", name = "junit-jupiter"}

@@ -1,0 +1,49 @@
+<div class="card">
+    <h2 class="card-title">Step 1: Plant Details</h2>
+
+    <p class="card-description">
+        Please provide the information about the plant automation you want to create in this wizard.
+    </p>
+
+    <!-- Plant Name -->
+    <div class="input-field">
+        <label for="plantName">Plant Name:</label>
+        <br>
+        <input id="plantName" placeholder="e.g. Tomato" type="text">
+        <br>
+        <small>Give your plant a unique name for your automation.</small>
+    </div>
+    <!-- Watering Frequency -->
+    <div class="input-field">
+        <label for="wateringFrequency">Watering Frequency (days):</label>
+        <br>
+        <input id="wateringFrequency" min="1" placeholder="e.g. 3" type="number">
+        <br>
+        <small>How often should your plant be watered automatically?</small>
+    </div>
+
+    <!-- Minimum Temperature -->
+    <div class="input-field">
+        <label for="minTemperature">Minimum Temperature (°C):</label>
+        <br>
+        <input id="minTemperature" placeholder="e.g. 18" type="number">
+        <br>
+        <small>The minimum temperature allowed for this plant before triggering actions.</small>
+    </div>
+    <!-- Next Button -->
+    <div>
+        <button class="card-button" onclick="
+        console.log(plantData);
+        setPlantData(
+                document.getElementById('plantName').value,
+                parseInt(document.getElementById('wateringFrequency').value),
+                parseFloat(document.getElementById('minTemperature').value)
+        );
+        loadSecondStep();
+        console.log(plantData);
+        populateSecondStep()
+        ">
+            Next
+        </button>
+    </div>
+</div>
