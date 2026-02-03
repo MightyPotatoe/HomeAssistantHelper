@@ -13,7 +13,12 @@ import lombok.Data;
 public class PlantDto {
 
     /**
-     * The name of the plant.
+     * The display name of the plant (used in dashboards/cards).
+     */
+    private String displayedName;
+
+    /**
+     * The unique name of the plant (used in entity IDs and YAML templates).
      */
     private String plantName;
 
@@ -25,5 +30,10 @@ public class PlantDto {
     /**
      * The minimum temperature (in degrees Celsius) the plant can tolerate.
      */
-    private double minimumTemperature;
+    private int minimumTemperature;
+
+    /**
+     * URL to the plant's image (used in dashboard cards).
+     */
+    private String imageUrl;
 }
