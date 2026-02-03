@@ -5,13 +5,20 @@
         Please provide the information about the plant automation you want to create in this wizard.
     </p>
 
+    <div class="input-field">
+        <label for="displayedName">Plant Name:</label>
+        <br>
+        <input id="displayedName" placeholder="e.g. Pomidory malinowe" type="text">
+        <br>
+        <small>Name of plant that will be displayed on dashboards.</small>
+    </div>
     <!-- Plant Name -->
     <div class="input-field">
         <label for="plantName">Plant Name:</label>
         <br>
         <input id="plantName" placeholder="e.g. Tomato" type="text">
         <br>
-        <small>Give your plant a unique name for your automation.</small>
+        <small>Give your plant a unique name for your automation. This must be in variable-like style</small>
     </div>
     <!-- Watering Frequency -->
     <div class="input-field">
@@ -30,18 +37,27 @@
         <br>
         <small>The minimum temperature allowed for this plant before triggering actions.</small>
     </div>
+    <!-- Image Url -->
+    <div class="input-field">
+        <label for="imageUrl">Image path:</label>
+        <br>
+        <input id="imageUrl" placeholder="local/tomato.png" type="text">
+        <br>
+        <small>Path to image representing your plant on dashboards.</small>
+    </div>
     <!-- Next Button -->
     <div>
         <button class="card-button" onclick="
         console.log(plantData);
         setPlantData(
+                document.getElementById('displayedName').value,
                 document.getElementById('plantName').value,
                 parseInt(document.getElementById('wateringFrequency').value),
-                parseFloat(document.getElementById('minTemperature').value)
+                parseFloat(document.getElementById('minTemperature').value),
+                document.getElementById('imageUrl').value
         );
         loadSecondStep();
         console.log(plantData);
-        populateSecondStep()
         ">
             Next
         </button>
